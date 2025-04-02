@@ -1,13 +1,15 @@
-import { useSearch } from "../api/UseSearch";
+import { useSearch } from "../api/useSearch";
+import NavBar from "./NavBar";
+import SearchResults from "./SearchResults";
 
 const SearchEngine = () => {
 
-    const x = useSearch('glider rider');
-
-    console.log(x);
+    const { isLoading, data } = useSearch('glider rider');
 
     return <>
-        test
+        <NavBar />
+        {!isLoading ? <SearchResults data={data} /> : <div>Loading</div>}
+
     </>
 }
 
