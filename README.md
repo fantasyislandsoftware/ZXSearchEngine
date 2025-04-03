@@ -5,6 +5,7 @@ Typescript React project, setup with vite and tailwind css
 To run:
 
 pnpm install
+
 pnpm start
 
 No api key needed for the endpoint
