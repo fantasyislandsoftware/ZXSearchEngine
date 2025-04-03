@@ -1,5 +1,4 @@
-ZX Search Engine
-A search engine utilising the zxinfo search api
+ZX Search Engine - A search engine utilising the zxinfo search api
 
 Typescript React project, setup with vite and tailwind css
 
