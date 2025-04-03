@@ -25,9 +25,9 @@ const SearchResults: FC<SearchResultsProps> = ({ data }) => {
                 const thumbnail = getThumbnailUrl(screens);
 
                 return (
-                    <div key={index} className="p-4 w-full h-0 shadow-lg pb-full rounded-xl bg-blue-200">
+                    <div key={index} className="p-4 w-full h-0 shadow-lg pb-full rounded-xl bg-blue-200" style={{ overflow: "hidden" }}>
                         {title}
-                        <img src={thumbnail}></img>
+                        <img style={{ maxHeight: '150px' }} src={thumbnail}></img>
 
                     </div>
                 );
