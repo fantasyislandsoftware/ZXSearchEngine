@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { ZXInfoSearchResult } from "../interface/zxinfo";
 import NoResults from "./NoResults";
+import { getThumbnailUrl } from "../functions/thumbnails";
 
 interface SearchResultsProps {
     data: ZXInfoSearchResult
@@ -19,10 +20,15 @@ const SearchResults: FC<SearchResultsProps> = ({ data }) => {
             {hits.map((hit, index) => {
 
                 const { _source } = hit;
+                const { title, screens } = _source;
+
+                const thumbnail = getThumbnailUrl(screens);
 
                 return (
                     <div key={index} className="p-4 w-full h-0 shadow-lg pb-full rounded-xl bg-blue-200">
-                        {_source.title}
+                        {title}
+                        <img src={thumbnail}></img>
+
                     </div>
                 );
 

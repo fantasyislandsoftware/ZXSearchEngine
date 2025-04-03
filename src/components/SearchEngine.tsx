@@ -6,7 +6,7 @@ import Loading from "./Loading";
 
 const SearchEngine = () => {
 
-    const [searchText, setSearchText] = useState('');
+    const [searchText, setSearchText] = useState('glider rider');
     const { isLoading, data } = useSearch(searchText);
 
     return <>
