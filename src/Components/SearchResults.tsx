@@ -1,11 +1,16 @@
 import { FC } from "react";
 import { ZXInfoSearchResult } from "../interface/zxinfo";
+import NoResults from "./NoResults";
 
 interface SearchResultsProps {
     data: ZXInfoSearchResult
 }
 
 const SearchResults: FC<SearchResultsProps> = ({ data }) => {
+
+    if (!data || !data.hits) {
+        return <NoResults />
+    }
 
     const { hits } = data.hits;
 
@@ -16,7 +21,7 @@ const SearchResults: FC<SearchResultsProps> = ({ data }) => {
                 const { _source } = hit;
 
                 return (
-                    <div key={index} className="w-full h-0 shadow-lg pb-full rounded-xl bg-green-300">
+                    <div key={index} className="p-4 w-full h-0 shadow-lg pb-full rounded-xl bg-blue-200">
                         {_source.title}
                     </div>
                 );
