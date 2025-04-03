@@ -2,4 +2,4 @@ ZX Search Engine
 
 A search engine utilising the zxinfo search api
 
-Typescript project setup with vite and tailwind css
+Typescript react project, setup with vite and tailwind css
