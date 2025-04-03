@@ -17,7 +17,7 @@ export interface ZXInfoSearchResultHit {
     _id: string;
     _index: string;
     _score: number;
-    _source: any;
+    _source: ZXInfoSearchResultHitSource;
 }
 
 export interface ZXInfoSearchResultHitSort {
